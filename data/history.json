@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2024-01-01T10:00:00",
+    "humidite": 35,
+    "pompe": true
+  },
+  {
+    "timestamp": "2024-01-01T09:45:00",
+    "humidite": 42,
+    "pompe": false
+  },
+  {
+    "timestamp": "2024-01-01T09:30:00",
+    "humidite": 38,
+    "pompe": true
+  }
+]
