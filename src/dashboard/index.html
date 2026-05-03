@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>🌱 Serre Connectée - Dashboard</title>
+</head>
+<body>
+    <h1>🌱 Serre Connectée</h1>
+
+    <h2>💧 Humidité du sol</h2>
+    <p id="humidite">-- %</p>
+
+    <h2>🚿 État de la pompe</h2>
+    <p id="pompe">--</p>
+
+    <h2>Contrôle Manuel</h2>
+    <button onclick="activerPompe(true)">Activer Pompe</button>
+    <button onclick="activerPompe(false)">Désactiver Pompe</button>
+
+    <h2>📊 Historique</h2>
+    <ul id="historique"></ul>
+
+    <script>
+        function updateDashboard(humidite, pompe) {
+            document.getElementById("humidite").innerText = humidite + " %";
+            document.getElementById("pompe").innerText = pompe ? "🟢 ON" : "🔴 OFF";
+        }
+
+        function activerPompe(etat) {
+            console.log("Override pompe :", etat);
+            document.getElementById("pompe").innerText = etat ? "🟢 ON (Manuel)" : "🔴 OFF (Manuel)";
+        }
+
+        // Test avec données simulées
+        updateDashboard(35, true);
+    </script>
+</body>
+</html>
